@@ -4,7 +4,15 @@ package gRPC_demo;
 
 import "google/protobuf/timestamp.proto";
 
+service TodoService {
+    rpc AddTodo(AddTodoRequest) returns (Todo) {}
+}
+
 message Todo {
     string body = 1;
     google.protobuf.Timestamp created_at = 2;
+}
+
+message AddTodoRequest {
+    string body = 1;
 }
