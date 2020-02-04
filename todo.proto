@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package gRPC_demo;
+
+import "google/protobuf/timestamp.proto";
+
+message Todo {
+    string body = 1;
+    google.protobuf.Timestamp created_at = 2;
+}
